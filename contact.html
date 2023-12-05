@@ -1,0 +1,411 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Kanit:ital,wght@1,300&family=Noto+Nastaliq+Urdu:wght@600&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+        height: 100vh;
+        background: url(img/black.png) center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    header .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+    }
+
+    header .content h1 {
+        font-size: 35px;
+        color: rgb(0, 247, 255);
+        margin-top: -600px;
+        margin-right: 50px;
+    }
+
+    header .content h3 {
+        font-size: 35px;
+        color: rgb(0, 247, 255);
+        /* margin-top: -600px;
+    margin-right: 50px; */
+    }
+
+    header .content p {
+        margin: 20px 0 30px;
+        color: rgb(0, 247, 255);
+        font-weight: 500;
+        margin-right: 200px;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(0, 0, 0, 0.3);
+    }
+
+    header * {
+        z-index: 15;
+    }
+
+    ul {
+        position: relative;
+        display: flow-root;
+        gap: 50px;
+        margin-top: -100px;
+        margin-left: 30px;
+        background-color: #002233;
+        width: 50px;
+        border-radius: 50px;
+    }
+
+    ul li {
+        position: relative;
+        list-style: none;
+        width: 80px;
+        height: 80px;
+        display: flow-root;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    ul li::before {
+        content: '';
+        position: absolute;
+        inset: 30px;
+        box-shadow: 0 0 0 10px var(--clr),
+            0 0 0 20px var(--), ;
+        transition: 0.5s;
+    }
+
+    ul li:hover:before {
+        inset: 15px;
+    }
+
+    ul li::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--bg);
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
+
+    ul li:hover:after {
+        inset: 0px;
+        transform: rotate(0deg);
+    }
+
+    ul li a {
+        position: relative;
+        text-decoration: none;
+        z-index: 10;
+        display: flow-root;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul li a i {
+        font-size: 2em;
+        transition: 0.5s;
+        color: var(--clr);
+        margin-left: 8px;
+        margin-top: 20px;  
+    }
+
+    ul li:hover a i {
+        color: var(--clr);
+        transform: translateY(-40%);
+    }
+
+    ul li a span {
+        position: absolute;
+        color: var(--clr);
+        opacity: 0;
+        transition: 0.5s;
+        transform: scale(0) translateY(200%);
+    }
+
+    ul li:hover a span {
+        opacity: 1;
+        transform: scale(1) translateY(100%);
+    }
+
+    ul li:hover a i,
+    ul li:hover a span {
+        filter: drop-shadow(0 0 20px var(--clr));
+        filter: drop-shadow(0 0 40px var(--clr));
+        filter: drop-shadow(0 0 60px var(--clr));
+    }
+
+    .code-loader {
+        margin-top: -100px;
+        margin-left: 210px;
+        color: rgb(10, 180, 185);
+        font-family: Consolas, Menlo, Monaco, monospace;
+        font-weight: bold;
+        font-size: 80px;
+        opacity: 0.8;
+    }
+
+    .code-loader span {
+        display: inline-block;
+        animation: pulse_414 0.4s alternate infinite ease-in-out;
+    }
+
+    .code-loader span:nth-child(odd) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes pulse_414 {
+        to {
+            transform: scale(0.8);
+            opacity: 0.5;
+        }
+    }
+        
+#contact{
+  padding: 5rem 0;
+  background: url(img/black.png) center center/cover fixed no-repeat;
+  height: 70vh;
+}   
+#contact .container{
+  max-width: 800px;
+  margin-top: -200px;
+  margin-left: 300px;
+}
+#contact .contact-content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contact .contact-content .contact-info{
+  width: 50%;
+}
+#contact .contact-content .contact-info div{
+  margin: 30px 0;
+  line-height: 1.7;
+}
+#contact .contact-content .contact-info h3{
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: rgb(10, 180, 185);
+}
+#contact .contact-content .contact-info p{
+ color: rgb(10, 180, 185);
+}
+#contact .contact-content .contact-info i{
+  margin-right: 10px;
+  color: rgb(10, 180, 185);
+}
+#contact .contact-content .contact-info a i{
+  background-color:#002233;
+  border-radius: 50%;
+  color: rgb(10, 180, 185);
+  padding: 15px;
+  font-size: 20px;
+}
+
+form{
+  width: 50%;
+}
+form input,textarea{
+  display: block;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 20px 0;
+  border: none;
+  background-color:rgb(109, 101, 101);
+  
+}
+
+.input {
+  border-radius: 10px;
+  outline: 2px solid rgb(10, 180, 185);
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fffcfc;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+  background-color: #000000;
+  color: #fffcfc;
+}
+
+.input:focus {
+  outline-offset: 5px;
+  background-color: #002233;
+}
+textarea{
+  border-radius: 10px;
+  outline: 2px solid rgb(10, 180, 185);
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fffefe;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+  background-color: #000000; 
+  color: #fffcfc;
+}
+textarea:focus{
+  outline-offset: 5px;
+  background-color: #002233;
+}
+#footer{
+  background-color: #002233;
+  text-align: center;
+  color: #2582b1;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+#footer a{
+  color: rgb(10, 180, 185);
+  text-decoration: none;
+}
+.btn:link,
+  .btn:visited {
+   text-transform: uppercase;
+   text-decoration: none;
+   color: rgb(0, 247, 255);
+   padding: 10px 30px;
+   border: 1px solid;
+   border-radius: 1000px;
+   display: inline-block;
+   transition: all .2s;
+   position: relative;
+   font-size: 20px;
+   position: absolute;
+   margin-top: 50px;
+   margin-left: -140px;
+  }
+  .btn:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgb(0, 0, 0)197, 0.5
+  }
+  
+  .btn:active {
+   transform: translateY(-3px);
+  }
+  .btn::after {
+   content: "";
+   display: inline-block;
+   height: 100%;
+   width: 100%;
+   border-radius: 100px;
+   top: 0;
+   left: 0;
+   position: absolute;
+   z-index: -1;
+   transition: all .3s;
+  }
+  
+  .btn:hover::after {
+   background-color: rgb(0, 0, 0);
+   transform: scaleX(1.4) scaleY(1.5);
+   opacity: 0;
+  }
+
+
+</style>
+<body>
+    <header>
+        <div class="img-aitem">
+            <img src="img/company logo (1) (1).png" width="10%" style="margin-left: 1200px;">
+        </div>
+        <div class="code-loader">
+            <span>{</span>codevida<span>}</span>
+        </div>
+        <nav>
+            <ul>
+                <li style="--clr:rgb(0, 247, 255);">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li style="--clr:rgb(255, 251, 0);">
+                    <a href="about.html">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>about</span>
+                    </a>
+                </li>
+                <li style="--clr:#ff0000;">
+                    <a href="portfolio.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>portfolio</span>
+                    </a>
+                </li>
+                <li style="--clr:rgb(255, 0, 140);">
+                    <a href="contact.html">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> 
+        <main>
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div>
+                            <h3><em>ADDRESS</em></h3>
+                            <P><i class="fa-solid fa-location-dot"></i><em>Kafr elshik, Desouq, el Agowzaine</em></P>
+                            <p><i class="fa-solid fa-phone"></i><em>phone 123456789</em></p>
+                            <p><i class="fa-solid fa-envelope"></i><em>support@tito`s.com</em></p>
+                        </div>
+                        <div>
+                            <h3><em>WURKING HOURS</em></h3>
+                            <P><em>8:00 AM to 11:00 PM on weekdays</em></P>
+                            <P><em>11:00 AM to 1:00 AM on weekends</em></P>
+                        </div>
+                        <div>
+                            <h3><em>FOLLW US</em></h3>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="full name" name="text" class="input">
+                        <input type="email" placeholder="email address" name="email" class="input">
+                        <input type="text" placeholder="subject" name="text" class="input">
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="message"></textarea>
+                        <a href="#" class="btn"><em>SEND MESSAGE</em></a>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <p><em>Copyright &copy; 2023 ALL rights reserved | Made by</em> <b><a
+                    href="https://www.facebook.com/profile.php?id=100033399947547&mibextid=ZbWKwL"
+                    target="_blank"><em>@AbdullahReda.com</em></a></b></p>
+    </footer>
+
+</body>
+</html>
